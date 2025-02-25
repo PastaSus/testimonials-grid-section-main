@@ -1,0 +1,306 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  /* line-height: 1.5; */
+  min-height: 100vh;
+  font-family: Barlow semi condensed, sans-serif;
+  margin: 0;
+  font-size: 0.8125rem;
+
+  line-height: 1.4;
+  /*  color:; */
+  background-color: var(--Light-grayish-blue);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root {
+  /* ### Primary */
+
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  --clr-box-shadow: 217 19% 35%;
+  /* ### Neutral */
+
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* ### Body Copy */
+
+  /* --Font-size-(paragraph): 13px */
+
+  /* spacing / typo system */
+
+  /* Typography System */
+  --font-size-4: 0.25rem; /* 4px */
+  --font-size-8: 0.5rem; /* 8px */
+  --font-size-10: 0.625rem; /* 10px */
+  --font-size-12: 0.75rem; /* 12px */
+  --font-size-14: 0.875rem; /* 14px */
+  --font-size-16: 1rem; /* 16px */
+  --font-size-18: 1.125rem; /* 18px */
+  --font-size-20: 1.25rem; /* 20px */
+  --font-size-24: 1.5rem; /* 24px */
+  --font-size-30: 1.875rem; /* 30px */
+  --font-size-36: 2.25rem; /* 36px */
+  --font-size-44: 2.75rem; /* 44px */
+  --font-size-52: 3.25rem; /* 52px */
+  --font-size-62: 3.875rem; /* 62px */
+  --font-size-74: 4.625rem; /* 74px */
+  --font-size-86: 5.375rem; /* 86px */
+  --font-size-98: 6.125rem; /* 98px */
+
+  /*Clamping/Scaling Typo scale */
+
+  --clamp-font-20: clamp(1.25rem, 2vw, 1.5rem); /* 20px → scales to 24px */
+  --clamp-font-24: clamp(1.5rem, 2.5vw, 1.875rem); /* 24px → scales to 30px */
+  --clamp-font-30: clamp(1.875rem, 3vw, 2.25rem); /* 30px → scales to 36px */
+  --clamp-font-36: clamp(2.25rem, 3.5vw, 2.75rem); /* 36px → scales to 44px */
+  --clamp-font-44: clamp(2.75rem, 4vw, 3.25rem); /* 44px → scales to 52px */
+  --clamp-font-52: clamp(3.25rem, 5vw, 3.875rem); /* 52px → scales to 62px */
+  --clamp-font-62: clamp(3.875rem, 6vw, 4.625rem); /* 62px → scales to 74px */
+  --clamp-font-74: clamp(4.625rem, 7vw, 5.375rem); /* 74px → scales to 86px */
+  --clamp-font-86: clamp(5.375rem, 8vw, 6.125rem); /* 86px → scales to 98px */
+  --clamp-font-98: clamp(6.125rem, 9vw, 7rem); /* 98px → scales to 112px */
+
+  /* Clamp variations */
+  --clamp-font-24-v2: clamp(1.5rem, 2.5vw, 2.75rem); /* 24px → scales to 44px */
+  --clamp-font-24-v3: clamp(1.5rem, 3vw, 3rem); /* 24px → scales to 48px */
+
+  /* Spacing System */
+  --spacing-2: 0.125rem; /* 2px */
+  --spacing-4: 0.25rem; /* 4px */
+  --spacing-8: 0.5rem; /* 8px */
+  --spacing-12: 0.75rem; /* 12px */
+  --spacing-16: 1rem; /* 16px */
+  --spacing-24: 1.5rem; /* 24px */
+  --spacing-32: 2rem; /* 32px */
+  --spacing-48: 3rem; /* 48px */
+  --spacing-64: 4rem; /* 64px */
+  --spacing-80: 5rem; /* 80px */
+  --spacing-96: 6rem; /* 96px */
+  --spacing-128: 8rem; /* 128px */
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: var(--spacing-64) auto;
+}
+
+.testimonials-grid-section {
+  display: grid;
+  max-width: 20.35rem;
+  place-content: center;
+
+  gap: var(--spacing-24);
+}
+
+.testimonial {
+  border-radius: 9px;
+  padding: var(--spacing-24) var(--spacing-32);
+  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-box-shadow) / 0.25);
+}
+
+.testimonial:first-child {
+  background: var(--Moderateviolet);
+  color: var(--White);
+}
+.testimonial:nth-child(2) {
+  background: var(--Very-dark-grayish-blue);
+  color: var(--White);
+}
+.testimonial:nth-child(3) {
+  background: var(--White);
+}
+.testimonial:nth-child(4) {
+  background: var(--Very-dark-blackish-blue);
+  color: var(--White);
+}
+.testimonial:last-child {
+  background: var(--White);
+}
+
+.testimonial:first-child .testimonial-img-profile,
+.testimonial:nth-child(4) .testimonial-img-profile {
+  border: 2px solid hsl(263, 100%, 66%);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  margin-block-end: var(--spacing-16);
+  gap: var(--spacing-16);
+}
+
+.img-box {
+  max-width: 30px;
+}
+
+.testimonial-img-profile {
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+.testimonial.quote {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.name {
+  font-size: var(--font-size-12);
+  font-weight: 500;
+}
+
+.testimonial:nth-child(3) .name,
+.testimonial:last-child .name,
+.testimonial:nth-child(3) .review-heading,
+.testimonial:last-child .review-heading {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.position {
+  font-size: var(--font-size-10);
+  opacity: 0.5;
+}
+
+.review-heading {
+  margin-block-end: var(--spacing-16);
+
+  font-size: var(--font-size-20);
+  font-weight: 600;
+}
+
+.review-desc {
+  opacity: 0.7;
+}
+
+/* tablets */
+@media (min-width: 48em) {
+  .testimonials-grid-section {
+    max-width: 40rem;
+    /* make 4 rows in tablet */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .col-span-2 {
+    grid-column: span 2;
+  }
+
+  .testimonial:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 90em) {
+  .testimonials-grid-section {
+    max-width: 70rem;
+    /* grid-template-rows: auto; */
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* .row-span-2 {
+    grid-row: span 2;
+  } */
+
+  .testimonial:last-child {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+}
