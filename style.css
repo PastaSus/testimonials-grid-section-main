@@ -43,6 +43,10 @@ body {
   line-height: 1.4;
   /*  color:; */
   background-color: var(--Light-grayish-blue);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -172,21 +176,26 @@ p {
   margin: 0;
 }
 
-.main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .container {
   margin: var(--spacing-64) auto;
 }
+
+/* .main {
+  display: flex;
+} */
 
 .testimonials-grid-section {
   display: grid;
   max-width: 20.35rem;
   place-content: center;
 
+  grid-auto-columns: auto;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
   gap: var(--spacing-24);
 }
 
@@ -218,6 +227,22 @@ p {
 .testimonial:first-child .testimonial-img-profile,
 .testimonial:nth-child(4) .testimonial-img-profile {
   border: 2px solid hsl(263, 100%, 66%);
+}
+
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
 }
 
 .flex {
@@ -277,15 +302,22 @@ p {
     /* make 4 rows in tablet */
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+
+    grid-template-areas:
+      "one one"
+      "two two"
+      "three three"
+      "four four"
+      "five five";
   }
 
-  .col-span-2 {
+  /* .col-span-2 {
     grid-column: span 2;
   }
 
   .testimonial:last-child {
     grid-column: span 2;
-  }
+  } */
 }
 
 @media (min-width: 90em) {
@@ -293,14 +325,24 @@ p {
     max-width: 70rem;
     /* grid-template-rows: auto; */
     grid-template-columns: repeat(4, 1fr);
+
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
   }
 
+  /* commented out code for spanning instead of  using template areas*/
+
+  /* .testimonial:nth-child(2),
+  .testimonial:nth-child(3) {
+    grid-column: span 1;
+  } */
   /* .row-span-2 {
     grid-row: span 2;
   } */
 
-  .testimonial:last-child {
+  /* .testimonial:last-child {
     grid-column: 4;
     grid-row: 1 / span 2;
-  }
+  } */
 }
